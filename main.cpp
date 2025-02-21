@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 using namespace std;
-//im in main
+//starting main.cpp
 
 class Task
 {
@@ -15,8 +15,7 @@ class Task
 };
 
 class TodoList
-{
-	
+{	
 	public:
 	vector<Task> todolist;
 	TodoList(){}
