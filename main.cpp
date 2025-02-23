@@ -52,8 +52,8 @@ class TodoList
         
         //method to edit task
 	void editTask(int index, std::string newDesc) {
-        if (index >= 0 && index < tasks.size()) {
-            tasks[index].description = newDesc;
+        if (index >= 0 && index < todolist.size()) {
+            todolist[index]._description = newDesc;
         } 
 	else {
             std::cout << "Ugyldigt index!\n";
@@ -69,14 +69,14 @@ class TodoList
 
 };
 
-void TodoList::complTask(const std::string& tasdescription) {
+void TodoList::complTask(const std::string& taskDescription) {
 	for (auto& task : todolist) {
-		if (task._description == taskdescription) {
+		if (task._description == taskDescription) {
 			task._description = "completed: " + task._description;
 			return;
 		}
 	}
-	cout << "Task not found: " << taskdescription << "endl;
+	cout << "Task not found: " << taskDescription << "endl;
 }
 
 
