@@ -38,6 +38,13 @@ class TodoList
 		todolist.push_back(task);
 	}
 
+	void removeTask(std::string description){
+		for(int i = 0; i < todolist.size(); i++){
+			if(todolist[i]._description == description){
+				todolist.erase(todolist.begin() + i);
+			}
+		}
+	}
 
 };
 
