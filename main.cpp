@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include "Dato.h"
 using namespace std;
 //starting main.cpp
 //Starting completedTask
@@ -12,8 +13,19 @@ class Task
 {
 	public:
 	string _description;
+	Dato _date;
 	Task(string description){
 		_description = description;
+	}
+
+	void addDate(int date){
+		Dato tempDate = Dato(date);
+		if(tempDate.validDato()){
+			_date = Dato(date);
+		}
+		else{
+			std::cout << "Invalid date" << std::endl;
+		}
 	}
 };
 
