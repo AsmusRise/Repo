@@ -76,7 +76,7 @@ void TodoList::complTask(const std::string& taskDescription) {
 			return;
 		}
 	}
-	cout << "Task not found: " << taskDescription << "endl;
+	cout << "Task not found: " << taskDescription << endl;
 }
 
 
