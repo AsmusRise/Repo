@@ -49,6 +49,15 @@ class TodoList
 	void addTask(const Task& task){
 		todolist.push_back(task);
 	}
+        
+        //method to edit task
+	void editTask(int index, std::string newDesc) {
+        if (index >= 0 && index < tasks.size()) {
+            tasks[index].description = newDesc;
+        } 
+	else {
+            std::cout << "Ugyldigt index!\n";
+        }}
 
 	void removeTask(std::string description){
 		for(int i = 0; i < todolist.size(); i++){
@@ -91,6 +100,9 @@ int main() {
 
 
     //print the todo list
+    todo.printTodoList();
+    todo.editTask(1, "købe ind og ryde op");
+
     todo.printTodoList();
     return 0;
 }
